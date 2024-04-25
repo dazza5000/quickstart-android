@@ -54,4 +54,18 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Bundle bundle = new Bundle();
+
+        bundle.putString(
+                FirebaseAnalytics.Param.SCREEN_NAME, "fiam_quickstart_main"
+        );
+        mFirebaseAnalytics.logEvent(
+                FirebaseAnalytics.Event.SCREEN_VIEW,
+                bundle
+        );
+    }
 }

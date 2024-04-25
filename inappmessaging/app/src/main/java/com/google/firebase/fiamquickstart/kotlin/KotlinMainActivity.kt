@@ -13,6 +13,7 @@ import com.google.firebase.installations.installations
 import com.google.firebase.Firebase
 import com.google.firebase.analytics.analytics
 
+
 class KotlinMainActivity : AppCompatActivity() {
 
     private lateinit var firebaseAnalytics: FirebaseAnalytics
@@ -29,11 +30,17 @@ class KotlinMainActivity : AppCompatActivity() {
         firebaseIam.isAutomaticDataCollectionEnabled = true
         firebaseIam.setMessagesSuppressed(false)
 
+
         binding.eventTriggerButton.setOnClickListener { view ->
-            firebaseAnalytics.logEvent("engagement_party", Bundle())
-            Snackbar.make(view, "'engagement_party' event triggered!", Snackbar.LENGTH_LONG)
+            Snackbar.make(view, "'engagement_party_two' event triggered!", Snackbar.LENGTH_LONG)
                 .setAction("Action", null)
                 .show()
+
+            firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SCREEN_VIEW,
+                Bundle().apply {
+                    putString(FirebaseAnalytics.Param.SCREEN_NAME, "fiam_quickstart_main")
+                }
+            )
         }
 
         // Get and display/log the installation id

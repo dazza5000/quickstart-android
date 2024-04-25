@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "322480278989",
+    "project_id": "fiam-292fd",
+    "storage_bucket": "fiam-292fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322480278989:android:cdb22c46a0f6dc1d850884",
+        "android_client_info": {
+          "package_name": "com.google.firebase.fiamquickstart"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbk2Qn_REhwq55e2fMSeXxVOyF2eaChM0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
